@@ -1,6 +1,6 @@
 <template>
     <button 
-        @click="$emit('onSelection', index)"
+        @click="$emit('onSelection', index!)"
         :class="{selected: index === selected}">
             {{title}}
     </button>
@@ -25,13 +25,16 @@
         transition: 0.4s;
         font-size: medium;
         font-weight: bold;
-        background-color: white;
+        background-color: transparent;
         color: lightslategray;
         border: 2px solid lightslategray;
         padding: 10px;
         margin: 5px;
         margin-left: 0;
         border-radius: 5px;
+    }
+    button:hover{
+        cursor: pointer;
     }
     .selected {
         background-color: lightslategray;
