@@ -43,7 +43,6 @@ import { reactive, ref } from 'vue';
 import type { TabProps } from './Tab.vue';
 import { inRange, isInt, maxLength, required } from '../utils/validation'
 import type { TabPanelProps } from './TabPanel.vue';
-import { tabPanelStore } from '@/store/tabPanel.store';
 
     export interface TabPanelEvents {
         (e: 'onSubmit', tabPanel: TabPanelProps): void
